@@ -1,1 +1,15 @@
-<div>Add App::Post::Post template here</div>
+<article class="gutten-post prose prose-lg" data-controller="post">
+  <h1 class="my-5">
+    <%= @post.title %>
+  </h1>
+
+  <% if @post.media.persisted? %>
+    <figure class="flex justify-center">
+      <%= image_tag @post.media.variant(:medium), class: 'object-cover rounded-lg w-full h-96' %>
+    </figure>
+  <% end %>
+
+  <p class="my-5">
+    <%= @post.body %>
+  </p>
+</article>

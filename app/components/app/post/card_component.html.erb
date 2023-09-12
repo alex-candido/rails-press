@@ -1,0 +1,17 @@
+<%= link_to @post, class: 'card bg-base-100 shadow-md transition transition-shadow ease-in-out hover:shadow-xl' do %>
+  <% if @post.media.persisted? %>
+    <figure>
+      <%= image_tag @post.media.variant(:medium), class: 'object-cover w-full h-48' %>
+    </figure>
+  <% else %>
+    <div class="bg-neutral-200 rounded-t-lg h-48"></div>
+  <% end %>
+  <div class="card-body">
+    <h2 class="card-title">
+      <%= @post.title %>
+    </h2>
+    <p class="overflow-hidden text-ellipsis">
+      <%= @post.body.to_plain_text[0..90] %> ...
+    </p>
+  </div>
+<% end %>

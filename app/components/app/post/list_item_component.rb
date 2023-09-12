@@ -2,7 +2,7 @@
 
 module App
   module Post
-    class PostComponent < ViewComponent::Base
+    class ListItemComponent < ViewComponent::Base
       def initialize(post:)
         @post = post
       end
