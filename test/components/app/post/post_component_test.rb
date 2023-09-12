@@ -2,11 +2,11 @@
 
 require "test_helper"
 
-class App::Post::CardComponentTest < ViewComponent::TestCase
+class App::Post::PostComponentTest < ViewComponent::TestCase
   def test_component_renders_something_useful
     # assert_equal(
     #   %(<span>Hello, components!</span>),
-    #   render_inline(App::Post::CardComponent.new(message: "Hello, components!")).css("span").to_html
+    #   render_inline(App::Post::PostComponent.new(message: "Hello, components!")).css("span").to_html
     # )
   end
 end
