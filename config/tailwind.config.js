@@ -21,6 +21,10 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
     require("daisyui"),
+    require('postcss-import'),
+    require('autoprefixer'),
+    require("postcss-nested"),
+    require("postcss-flexbugs-fixes"),
   ],
   daisyui: {
     themes: ["light"],

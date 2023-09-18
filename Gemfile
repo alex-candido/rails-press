@@ -15,6 +15,9 @@ gem "sqlite3", "~> 1.4"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
+# Use the Devise for Authentication feature [https://github.com/heartcombo/devise]
+gem "devise", "~> 4.9", ">= 4.9.2"
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
@@ -41,6 +44,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+
+# https://github.com/mislav/will_paginate
+gem "will_paginate", "~> 4.0"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -77,6 +83,9 @@ group :development do
   # gem "spring"
 
   gem "ruby-lsp-rails"
+
+  # Use for generate devise views as tailwindcss [https://github.com/posiczko/devise-tailwindcssed]
+  gem "devise-tailwindcssed"
 end
 
 group :test do
