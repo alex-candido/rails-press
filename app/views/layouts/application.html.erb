@@ -23,7 +23,7 @@
           <% if user_signed_in? %>
             <div class="flex items-center gap-4">
               <div class="font-bold">
-                <%= current_user.email %>
+                <%= link_to current_user.email, admin_profile_index_path %>
               </div>
               <%= link_to 'Logout', destroy_user_session_path, class: 'btn btn-ghost', data: { "turbo-method": :delete } %>
             </div>
@@ -37,6 +37,13 @@
       <% end %>
     </div>
     <main class="container mx-auto my-8 px-5">
+      <div class="mx-auto w-full text-center" >
+        <% if notice.present? %>
+          <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+          <%= notice %>
+          </p>
+        <% end %>
+      </div>
       <%= yield %>
     </main>
   </body>

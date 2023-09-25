@@ -3,7 +3,11 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <div id="posts" class="min-w-full mt-14 pt-6">
+  <div class="flex justify-end items-flex-end">
+    <%= link_to 'New post', new_post_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+  <div id="posts" class="min-w-full">
     <div class="text-2xl font-bold mb-4">
       Posts as Cards
     </div>

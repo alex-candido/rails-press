@@ -10,6 +10,7 @@ class User < ApplicationRecord
     inactive: 1
   }
 
+  has_many :posts
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

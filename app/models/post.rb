@@ -1,4 +1,13 @@
 class Post < ApplicationRecord
+  enum status: {
+    draft: 0,
+    published: 1,
+    archived: 2,
+    inappropriate: 3,
+  }
+
+  belongs_to :user
+
   has_rich_text :body
 
   has_one_attached :media do |attachable|
@@ -6,3 +15,6 @@ class Post < ApplicationRecord
     attachable.variant :medium, resize_to_limit: [600, 600]
   end
 end
+
+
+# rascunho, publicado, arquivado, inapropriado
